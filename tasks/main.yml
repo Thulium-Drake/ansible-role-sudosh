@@ -1,0 +1,24 @@
+---
+- name: 'Ensure package'
+  package:
+    name: "{{ sudosh_package }}"
+    state: 'present'
+
+- name: 'Ensure allowed login shells is restricted to only sudosh'
+  copy:
+    content: |
+      # This file is managed by Ansible, YOUR CHANGES WILL BE LOST!
+      /usr/bin/sudosh
+    dest: '/etc/shells'
+    mode: 0444
+    owner: 'root'
+    group: 'root'
+
+- name: 'Ensure sudo rules for sudosh'
+  copy:
+    src: 'sudoers-sudosh'
+    dest: '/etc/sudoers.d/sudosh-all'
+    mode: 0440
+    validate: "visudo -cf %s"
+    owner: 'root'
+    group: 'root'

@@ -1,0 +1,7 @@
+# This file is managed by Ansible, YOUR CHANGES WILL BE LOST!
+Defaults log_output
+Defaults!/usr/bin/sudoreplay !log_output
+Defaults!/sbin/reboot !log_output
+
+# Allow users to sudo to themselves
+ALL ALL=() ALL

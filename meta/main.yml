@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  author: Jeffrey van Pelt
+  description: Terminal logging via Sudosh, powered by Ansible
+  company:
+  role_name: sudosh
+
+  license: GPLv3
+
+  min_ansible_version: 2.9
+
+  platforms:
+    - name: EL
+      versions:
+        - 7
+
+  galaxy_tags:
+    - sudosh
+    - logging
+    - audit
+
+dependencies: []
