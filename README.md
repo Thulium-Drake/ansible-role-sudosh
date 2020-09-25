@@ -40,5 +40,20 @@ root
 
 Where 'user' is the login name of the original user.
 
+## Becoming root
+Due to how sudo processes rules, you need to be more explicit in which user you wish to become.
+
+If you wish to become 'root', run the following command:
+
+```
+[user>user@host ~]$ sudo su - # << This does not work
+Password:
+su: Authentication failure
+[user>user@host ~]$ sudo -u root su - # << This will work
+[sudo] password for user:
+Last login: Fri Sep 25 13:16:37 UTC 2020 on pts/4
+[user>root@host ~]#
+```
+
 ## Replaying sessions
 Replaying sessions can be done using ```sudoreplay``` which is available via the 'sudo-ldap' package.
