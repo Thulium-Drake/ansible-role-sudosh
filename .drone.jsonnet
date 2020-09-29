@@ -33,7 +33,7 @@
         image: "registry.element-networks.nl/tools/molecule",
         commands: [
           "ansible-galaxy login --github-token $$GITHUB_TOKEN",
-          "ansible-galaxy import Thulium-Drake ansible-role-foreman --role-name=sudosh",
+          "ansible-galaxy import Thulium-Drake ansible-role-sudosh --role-name=sudosh",
         ],
         environment:
           { GITHUB_TOKEN: { from_secret: "github_token" } },
