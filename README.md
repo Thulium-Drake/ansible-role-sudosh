@@ -1,3 +1,4 @@
+[![Build Status](https://drone.element-networks.nl/api/badges/Ansible/role-sudosh/status.svg)](https://drone.element-networks.nl/Ansible/role-sudosh)
 # Shell logging with sudosh, powered by Ansible
 This role will configure a system to log user sessions with sudosh.
 
