@@ -1,3 +1,10 @@
 ---
 # Package to install that contains sudosh (please note that you must provide this yourself!)
 sudosh_package: 'sudosh'
+
+# Exclude service accounts from logging
+# This can be useful for a dedicated user that executes the Ansible tasks
+# as these create a lot of logs
+sudosh_exclude_svc_users: true
+# Comma-separated list of users (if multiple)
+sudosh_svc_users: 'ansible'

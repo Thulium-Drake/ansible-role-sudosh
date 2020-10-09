@@ -1,5 +1,9 @@
 # This file is managed by Ansible, YOUR CHANGES WILL BE LOST!
 Defaults log_output
+{% if sudosh_exclude_svc_users %}
+# Prevent a lot of clutter in the logs for service account runs
+Defaults:{{ sudosh_svc_users }} !log_output
+{% endif %}
 Defaults!/usr/bin/sudoreplay !log_output
 Defaults!/sbin/reboot !log_output
 

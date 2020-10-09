@@ -15,8 +15,8 @@
     group: 'root'
 
 - name: 'Ensure sudo rules for sudosh'
-  copy:
-    src: 'sudoers-sudosh'
+  template:
+    src: 'sudoers-sudosh.j2'
     dest: '/etc/sudoers.d/sudosh-all'
     mode: 0440
     validate: "visudo -cf %s"
