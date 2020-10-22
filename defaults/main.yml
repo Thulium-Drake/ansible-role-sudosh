@@ -2,6 +2,11 @@
 # Package to install that contains sudosh (please note that you must provide this yourself!)
 sudosh_package: 'sudosh'
 
+# Enable requiretty, this makes it harder to evade running sudosh
+# as 'ssh user@host command' no longer works, but breaks anything that requires
+# a PTY, such as rsync and scp
+sudosh_requiretty: false
+
 # Exclude service accounts from logging
 # This can be useful for a dedicated user that executes the Ansible tasks
 # as these create a lot of logs
