@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  author: Jeffrey van Pelt
+  author: thulium_drake
   description: Terminal logging via Sudosh, powered by Ansible
   company:
   role_name: sudosh
